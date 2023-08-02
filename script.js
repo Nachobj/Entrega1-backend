@@ -10,7 +10,7 @@ class ProductManager {
             console.log("Los campos tienen que ser obligatorios");
 
             return;
-        }
+        } 
 
         if (this.products.some((product) => product.code === products.code)) {
             console.log("El código ya existe");
@@ -31,9 +31,9 @@ class ProductManager {
         const product = this.products.find((product) => product.id === id);
         if(!product) {
             console.error("Not found");
-
-            return;
         }
+        
+        return product;
     }
 }
 
